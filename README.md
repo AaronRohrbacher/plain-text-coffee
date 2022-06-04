@@ -12,33 +12,33 @@ The primary key is defined as productNumber. Returns a JSON object of the specif
 
 Creates a product. Accepts a JSON payload:  
 
-``
+```
     {
         productNumber: string
         productName: string
         productDescription: string
     }
-``
+```
 
 `PUT /`  
 Updates a product. Accepts a JSON payload:  
 
-``
+```
     {
         productNumber: string
         productName: string
         productDescription: string
     }
-``
+```
 
 `DELETE /`  
 Deletes a product. Accepts a JSON payload, where `primary_key` is the item's `productNumber`.  
 
-``
+```
     {
         primary_key: string
     }
-``
+```
 
 ## Installation  
 Requires:   
