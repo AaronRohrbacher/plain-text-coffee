@@ -28,6 +28,13 @@ functions:
           path: /
           method: post
 
+  readProduct:
+    handler: readProduct.readProduct
+    events:
+      - httpApi:
+          path: /{primary_key}
+          method: get
+
 resources:
   Resources:
     ProductTable:
