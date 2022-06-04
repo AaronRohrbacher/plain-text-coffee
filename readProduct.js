@@ -2,7 +2,6 @@
 const AWS = require('aws-sdk');
  
 module.exports.readProduct = async (event) => {
-//   const body = JSON.parse(Buffer.from(event.body, 'base64').toString());
   const { primary_key } = event.pathParameters;
   const dynamoDb = new AWS.DynamoDB.DocumentClient();
   const params = {
