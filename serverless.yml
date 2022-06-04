@@ -35,6 +35,13 @@ functions:
           path: /{primary_key}
           method: get
 
+  updateProduct:
+    handler: updateProduct.updateProduct
+    events:
+      - httpApi:
+          path: /
+          method: put
+
 resources:
   Resources:
     ProductTable:

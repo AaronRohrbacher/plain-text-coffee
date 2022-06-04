@@ -5,7 +5,7 @@ module.exports.readProduct = async (event) => {
 //   const body = JSON.parse(Buffer.from(event.body, 'base64').toString());
   const { primary_key } = event.pathParameters;
   const dynamoDb = new AWS.DynamoDB.DocumentClient();
-  const putParams = {
+  const params = {
     TableName: process.env.DYNAMODB_PRODUCT_TABLE,
     KeyConditionExpression: "primary_key = :primary_key",
     ExpressionAttributeValues: {
@@ -13,7 +13,7 @@ module.exports.readProduct = async (event) => {
     },
     Select: "ALL_ATTRIBUTES"
   };
-const response = await dynamoDb.query(putParams).promise();
+const response = await dynamoDb.query(params).promise();
 
 return response;
 
