@@ -21,6 +21,14 @@ provider:
 
 
 functions:
+
+  products:
+    handler: products.products
+    events:
+      - httpApi:
+          path: /
+          method: get
+
   createProduct:
     handler: createProduct.createProduct
     events:
@@ -41,6 +49,13 @@ functions:
       - httpApi:
           path: /
           method: put
+
+  deleteProduct:
+    handler: deleteProduct.deleteProduct
+    events:
+      - httpApi:
+          path: /delete
+          method: delete
 
 resources:
   Resources:
