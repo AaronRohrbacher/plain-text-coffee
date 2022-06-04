@@ -13,31 +13,31 @@ The primary key is defined as productNumber. Returns a JSON object of the specif
 Creates a product. Accepts a JSON payload:  
 
 ``
-{
-    productNumber: string
-    productName: string
-    productDescription: string
-}
+    {
+        productNumber: string
+        productName: string
+        productDescription: string
+    }
 ``
 
 `PUT /`  
 Updates a product. Accepts a JSON payload:  
 
 ``
-{
-    productNumber: string
-    productName: string
-    productDescription: string
-}
+    {
+        productNumber: string
+        productName: string
+        productDescription: string
+    }
 ``
 
 `DELETE /`  
 Deletes a product. Accepts a JSON payload, where `primary_key` is the item's `productNumber`.  
 
 ``
-{
-    primary_key: string
-}
+    {
+        primary_key: string
+    }
 ``
 
 ## Installation  
@@ -45,6 +45,8 @@ Requires:
 NodeJs 14+  
 AWS SDK (tested on WSL 2 Ubuntu 20.04LTS)  
 properly configured `~/.aws/credentials` file  
+
+
 `npm install -g serverless`  
 
 `git clone https://github.com/aaronrohrbacher/plain-text-coffee`  
